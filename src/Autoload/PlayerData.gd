@@ -9,7 +9,7 @@ var score: = 0 setget set_score
 var deaths: = 0 setget set_deaths
 
 
-func reset():
+func reset() -> void:
 	self.score = 0
 	self.deaths = 0
 	emit_signal("reset")
@@ -17,10 +17,9 @@ func reset():
 
 func set_score(new_score: int) -> void:
 	score = new_score
-	score = 5
 	emit_signal("updated")
 
 
-func set_deaths(new_value: int) -> void:
+func set_deaths(new_score: int) -> void:
 	deaths = new_score
 	emit_signal("died")
